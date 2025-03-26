@@ -29,24 +29,3 @@ function CellClick(event) {
     board_state[cell_index] = currentPlayer;
     clickedCell.textContent = currentPlayer;
 
-    // Check for win 
-    if (checkWinner()) {
-        status_text.textContent = `🎉 Player ${currentPlayer} Wins! 🎉`;
-        gameActive = false;
-        return;
-    }
-    // draw condition
-    if (board_state.every(cell => cell !== "")) {
-        status_text.textContent = "🤝 It's a Draw!";
-        gameActive = false;
-        return;
-    }
-
-    // Switch turn
-    currentPlayer = currentPlayer === "X" ? "O" : "X";
-    status_text.textContent = `It's Player ${currentPlayer}'s Turn!`;
-}
-
-// Event listeners
-cells.forEach(cell => cell.addEventListener("click", CellClick));
-reset_button.addEventListener("click", reset_Game);

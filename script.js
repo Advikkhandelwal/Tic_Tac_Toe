@@ -47,35 +47,6 @@ function CellClick(event) {
     status_text.textContent = `It's Player ${currentPlayer}'s Turn!`;
 }
 
-// Check for winner
-function checkWinner() {
-    for (let pattern of winning_patterns) {
-        const [a, b, c] = pattern;
-        if (board_state[a] && board_state[a] === board_state[b] && board_state[a] === board_state[c]) {
-            highlightWinningCells(pattern);
-            return true;
-        }
-    }
-    return false;
-}
-
-// Highlight winning cells
-function highlightWinningCells(pattern) {
-    pattern.forEach(index => cells[index].classList.add("winning-cell"));
-}
-
-// Reset the game
-function reset_Game() {
-    board_state.fill("");
-    gameActive = true;
-    currentPlayer = "X";
-    status_text.textContent = "It's Player X's Turn!";
-    cells.forEach(cell => {
-        cell.textContent = "";
-        cell.classList.remove("winning-cell");
-    });
-}
-
 // Event listeners
 cells.forEach(cell => cell.addEventListener("click", CellClick));
 reset_button.addEventListener("click", reset_Game);

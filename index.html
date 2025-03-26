@@ -4,26 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Rubik+Distressed&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>❌ Tic Tac Toe ⭕</h1>
-    <p class="instructions">Click on a cell to make your move!</p>
-    
-    <div class="board" id="board">
-        <div class="cell" data-box_idx="0"></div>
-        <div class="cell" data-box_idx="1"></div>
-        <div class="cell" data-box_idx="2"></div>
-        <div class="cell" data-box_idx="3"></div>
-        <div class="cell" data-box_idx="4"></div>
-        <div class="cell" data-box_idx="5"></div>
-        <div class="cell" data-box_idx="6"></div>
-        <div class="cell" data-box_idx="7"></div>
-        <div class="cell" data-box_idx="8"></div>
+    <p class="instructions">THREE IN A ROW</p>
+    <div class="container">
+        <div class="board" id="board">
+            <div class="cell" data-box_idx="0"></div>
+            <div class="cell" data-box_idx="1"></div>
+            <div class="cell" data-box_idx="2"></div>
+            <div class="cell" data-box_idx="3"></div>
+            <div class="cell" data-box_idx="4"></div>
+            <div class="cell" data-box_idx="5"></div>
+            <div class="cell" data-box_idx="6"></div>
+            <div class="cell" data-box_idx="7"></div>
+            <div class="cell" data-box_idx="8"></div>
+            
+        </div>
+        <p style="margin-right: 280px;">⭕ :</p>
+        <p style="margin-right: 280px;">❌ :</p>
     </div>
 
     <h2 id="status">It's Player X's Turn!</h2>
-    <button id="reset">Restart The Game</button>
+    <button id="reset">Restart Game</button>
 
     <script src="script.js"></script>
 </body>
